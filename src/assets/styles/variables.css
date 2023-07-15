@@ -1,0 +1,55 @@
+:root {
+	--saturation-factor: 1;
+
+	--blue-345-hsl: 200 calc(var(--saturation-factor, 1) * 100%) 49.4%;
+	--blue-430-hsl: 212 calc(var(--saturation-factor, 1) * 100%) 45.3%;
+
+	--blue-345: hsl(var(--blue-345-hsl) / 1);
+	--blue-430: hsl(var(--blue-430-hsl) / 1);
+
+	--primary-200-hsl: 216 calc(var(--saturation-factor, 1) * 9.8%) 90%;
+	--primary-230-hsl: 210 calc(var(--saturation-factor, 1) * 9.1%) 87.1%;
+	--primary-330-hsl: 215 calc(var(--saturation-factor, 1) * 8.8%) 73.3%;
+	--primary-500-hsl: 228 calc(var(--saturation-factor, 1) * 6%) 32.5%;
+	--primary-600-hsl: 223 calc(var(--saturation-factor, 1) * 6.7%) 20.6%;
+	--primary-700-hsl: 225 calc(var(--saturation-factor, 1) * 6.3%) 12.5%;
+
+	--primary-200: hsl(var(--primary-200-hsl) / 1);
+	--primary-230: hsl(var(--primary-230-hsl) / 1);
+	--primary-330: hsl(var(--primary-330-hsl) / 1);
+	--primary-500: hsl(var(--primary-500-hsl) / 1);
+	--primary-600: hsl(var(--primary-600-hsl) / 1);
+	--primary-700: hsl(var(--primary-700-hsl) / 1);
+
+	--red-345-hsl: 358 calc(var(--saturation-factor, 1) * 92.9%) 72.4%;
+	--red-400-hsl: 359 calc(var(--saturation-factor, 1) * 87.3%) 59.8%;
+	--red-430-hsl: 358 calc(var(--saturation-factor, 1) * 68.8%) 53.5%;
+	--red-500-hsl: 360 calc(var(--saturation-factor, 1) * 60.2%) 39.4%;
+
+	--red-345: hsl(var(--red-345-hsl) / 1);
+	--red-400: hsl(var(--red-400-hsl) / 1);
+	--red-430: hsl(var(--red-430-hsl) / 1);
+	--red-500: hsl(var(--red-500-hsl) / 1);
+
+	--header-secondary: var(--primary-500);
+
+	--input-background: var(--primary-200);
+
+	--status-danger: var(--red-430);
+
+	--text-danger: var(--red-500);
+	--text-link: var(--blue-430);
+	--text-normal: var(--primary-600);
+}
+
+:root.dark {
+	--header-secondary: var(--primary-330);
+
+	--input-background: var(--primary-700);
+
+	--status-danger: var(--red-400);
+
+	--text-danger: var(--red-345);
+	--text-link: var(--blue-345);
+	--text-normal: var(--primary-230);
+}
