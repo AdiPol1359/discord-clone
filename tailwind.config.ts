@@ -12,6 +12,15 @@ export default {
 					345: 'var(--blue-345)',
 					430: 'var(--blue-430)',
 				},
+				brand: {
+					500: 'var(--brand-500)',
+					600: 'var(--brand-600)',
+				},
+				'brand-experiment': {
+					DEFAULT: 'var(--brand-experiment)',
+					560: 'var(--brand-experiment-560)',
+					600: 'var(--brand-experiment-600)',
+				},
 				header: {
 					secondary: 'var(--header-secondary)',
 				},
@@ -39,6 +48,9 @@ export default {
 					danger: 'var(--text-danger)',
 					link: 'var(--text-link)',
 					normal: 'var(--text-normal)',
+				},
+				white: {
+					500: 'var(--white-500)',
 				},
 			},
 			fontFamily: {
