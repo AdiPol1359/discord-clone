@@ -2,5 +2,5 @@
 @import url('./variables.css');
 
 [data-whatintent='keyboard'] *:focus {
-	@apply outline-none ring-4 ring-text-link;
+	@apply ring-4 ring-text-link;
 }
