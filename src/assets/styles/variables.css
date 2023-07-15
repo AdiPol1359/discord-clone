@@ -7,6 +7,14 @@
 	--blue-345: hsl(var(--blue-345-hsl) / 1);
 	--blue-430: hsl(var(--blue-430-hsl) / 1);
 
+	--brand-500-hsl: 235 calc(var(--saturation-factor, 1) * 85.6%) 64.7%;
+	--brand-560-hsl: 235 calc(var(--saturation-factor, 1) * 51.4%) 52.4%;
+	--brand-600-hsl: 235 calc(var(--saturation-factor, 1) * 46.7%) 44.1%;
+
+	--brand-500: hsl(var(--brand-500-hsl) / 1);
+	--brand-560: hsl(var(--brand-560-hsl) / 1);
+	--brand-600: hsl(var(--brand-600-hsl) / 1);
+
 	--primary-200-hsl: 216 calc(var(--saturation-factor, 1) * 9.8%) 90%;
 	--primary-230-hsl: 210 calc(var(--saturation-factor, 1) * 9.1%) 87.1%;
 	--primary-330-hsl: 215 calc(var(--saturation-factor, 1) * 8.8%) 73.3%;
@@ -30,6 +38,14 @@
 	--red-400: hsl(var(--red-400-hsl) / 1);
 	--red-430: hsl(var(--red-430-hsl) / 1);
 	--red-500: hsl(var(--red-500-hsl) / 1);
+
+	--white-500-hsl: 0 calc(var(--saturation-factor, 1) * 0%) 100%;
+
+	--white-500: hsl(var(--white-500-hsl) / 1);
+
+	--brand-experiment: var(--brand-500);
+	--brand-experiment-560: var(--brand-560);
+	--brand-experiment-600: var(--brand-600);
 
 	--header-secondary: var(--primary-500);
 
