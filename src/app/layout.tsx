@@ -18,7 +18,7 @@ export default function RootLayout({
 	readonly children: ReactNode;
 }) {
 	return (
-		<html lang="en" className={`${ggSans.variable} dark`}>
+		<html lang="en" className={ggSans.variable}>
 			<body>{children}</body>
 			<WhatInput />
 		</html>
