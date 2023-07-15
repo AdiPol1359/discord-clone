@@ -30,7 +30,7 @@ export default {
 					345: 'var(--red-345)',
 					400: 'var(--red-400)',
 					430: 'var(--red-430)',
-					500: 'var(--red-430)',
+					500: 'var(--red-500)',
 				},
 				status: {
 					danger: 'var(--status-danger)',
