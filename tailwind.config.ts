@@ -13,11 +13,14 @@ export default {
 					430: 'var(--blue-430)',
 				},
 				brand: {
+					400: 'var(--brand-400)',
 					500: 'var(--brand-500)',
 					600: 'var(--brand-600)',
 				},
 				'brand-experiment': {
 					DEFAULT: 'var(--brand-experiment)',
+					400: 'var(--brand-experiment-400)',
+					500: 'var(--brand-experiment-500)',
 					560: 'var(--brand-experiment-560)',
 					600: 'var(--brand-experiment-600)',
 				},
@@ -31,6 +34,9 @@ export default {
 					200: 'var(--primary-200)',
 					230: 'var(--primary-230)',
 					330: 'var(--primary-330)',
+					360: 'var(--primary-360)',
+					400: 'var(--primary-400)',
+					460: 'var(--primary-460)',
 					500: 'var(--primary-500)',
 					600: 'var(--primary-600)',
 					700: 'var(--primary-700)',
@@ -47,6 +53,7 @@ export default {
 				text: {
 					danger: 'var(--text-danger)',
 					link: 'var(--text-link)',
+					muted: 'var(--text-muted)',
 					normal: 'var(--text-normal)',
 				},
 				white: {
