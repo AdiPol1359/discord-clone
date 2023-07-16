@@ -1,5 +1,6 @@
-import type { StorybookConfig } from '@storybook/nextjs';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
+
+import type { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
 	stories: ['../src/**/*.stories.@(ts|tsx)'],
@@ -19,7 +20,7 @@ const config: StorybookConfig = {
 	docs: {
 		autodocs: 'tag',
 	},
-	webpackFinal: async (config) => {
+	webpackFinal: (config) => {
 		const rule = config.module?.rules?.find(
 			(rule) =>
 				typeof rule === 'object' &&
