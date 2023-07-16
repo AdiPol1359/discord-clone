@@ -1,8 +1,7 @@
 import { forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-// TODO: FIX STORYBOOK
-import Checkmark from '../../../../assets/svg/checkmark.svg';
+import Checkmark from '@/assets/svg/checkmark.svg';
 
 import type { ChangeEventHandler, FocusEventHandler, ReactNode } from 'react';
 
