@@ -30,6 +30,7 @@
 		"@storybook/nextjs": "7.0.27",
 		"@storybook/react": "7.0.27",
 		"@storybook/testing-library": "0.0.14-next.2",
+		"@svgr/webpack": "8.0.1",
 		"@testing-library/jest-dom": "5.16.5",
 		"@testing-library/react": "14.0.0",
 		"@types/node": "20.4.2",
@@ -56,6 +57,7 @@
 		"prettier-plugin-tailwindcss": "0.4.1",
 		"storybook": "7.0.27",
 		"tailwindcss": "3.3.3",
+		"tsconfig-paths-webpack-plugin": "4.1.0",
 		"typescript": "5.1.6",
 		"vitest": "0.33.0"
 	},
