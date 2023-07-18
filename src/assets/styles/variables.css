@@ -9,15 +9,21 @@
 	--brand-560: hsl(235 calc(var(--saturation-factor) * 51.4%) 52.4%);
 	--brand-600: hsl(235 calc(var(--saturation-factor) * 46.7%) 44.1%);
 
+	--primary-400-hsl: 223 calc(var(--saturation-factor) * 5.8%) 52.9%;
+	--primary-500-hsl: 228 calc(var(--saturation-factor) * 6%) 32.5%;
+
+	--primary-130: hsl(220 calc(var(--saturation-factor) * 13%) 95.5%);
 	--primary-200: hsl(216 calc(var(--saturation-factor) * 9.8%) 90%);
 	--primary-230: hsl(210 calc(var(--saturation-factor) * 9.1%) 87.1%);
 	--primary-330: hsl(215 calc(var(--saturation-factor) * 8.8%) 73.3%);
 	--primary-360: hsl(214 calc(var(--saturation-factor) * 8.1%) 61.2%);
-	--primary-400: hsl(223 calc(var(--saturation-factor) * 5.8%) 52.9%);
+	--primary-400: hsl(var(--primary-400-hsl));
 	--primary-460: hsl(228 calc(var(--saturation-factor) * 5.2%) 38%);
-	--primary-500: hsl(228 calc(var(--saturation-factor) * 6%) 32.5%);
+	--primary-500: hsl(var(--primary-500-hsl));
 	--primary-600: hsl(223 calc(var(--saturation-factor) * 6.7%) 20.6%);
+	--primary-630: hsl(220 calc(var(--saturation-factor) * 6.5%) 18%);
 	--primary-700: hsl(225 calc(var(--saturation-factor) * 6.3%) 12.5%);
+	--primary-860: hsl(240 calc(var(--saturation-factor) * 7.7%) 2.5%);
 
 	--red-345: hsl(358 calc(var(--saturation-factor) * 92.9%) 72.4%);
 	--red-400: hsl(359 calc(var(--saturation-factor) * 87.3%) 59.8%);
@@ -25,6 +31,12 @@
 	--red-500: hsl(360 calc(var(--saturation-factor) * 60.2%) 39.4%);
 
 	--white-500: hsl(0 calc(var(--saturation-factor) * 0%) 100%);
+
+	--background-secondary: var(--primary-130);
+	--background-tertiary: var(--primary-200);
+
+	--background-modifier-hover: hsl(var(--primary-400-hsl) / 0.16);
+	--background-modifier-selected: hsl(var(--primary-400-hsl) / 0.24);
 
 	--brand-experiment: var(--brand-500);
 	--brand-experiment-400: var(--brand-400);
@@ -36,6 +48,10 @@
 
 	--input-background: var(--primary-200);
 
+	--interactive-active: var(--primary-860);
+	--interactive-hover: var(--primary-600);
+	--interactive-normal: var(--primary-500);
+
 	--status-danger: var(--red-430);
 
 	--text-danger: var(--red-500);
@@ -45,9 +61,19 @@
 }
 
 :root.dark {
+	--background-secondary: var(--primary-630);
+	--background-tertiary: var(--primary-700);
+
+	--background-modifier-hover: hsl(var(--primary-500-hsl) / 0.3);
+	--background-modifier-selected: hsl(var(--primary-500-hsl) / 0.6);
+
 	--header-secondary: var(--primary-330);
 
 	--input-background: var(--primary-700);
+
+	--interactive-active: var(--white-500);
+	--interactive-hover: var(--primary-230);
+	--interactive-normal: var(--primary-330);
 
 	--status-danger: var(--red-400);
 
