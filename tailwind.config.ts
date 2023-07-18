@@ -8,6 +8,14 @@ export default {
 	theme: {
 		extend: {
 			colors: {
+				background: {
+					secondary: 'var(--background-secondary)',
+					tertiary: 'var(--background-tertiary)',
+				},
+				'background-modifier': {
+					hover: 'var(--background-modifier-hover)',
+					selected: 'var(--background-modifier-selected)',
+				},
 				blue: {
 					345: 'var(--blue-345)',
 					430: 'var(--blue-430)',
@@ -30,7 +38,13 @@ export default {
 				input: {
 					background: 'var(--input-background)',
 				},
+				interactive: {
+					active: 'var(--interactive-active)',
+					hover: 'var(--interactive-hover)',
+					normal: 'var(--interactive-normal)',
+				},
 				primary: {
+					130: 'var(--primary-130)',
 					200: 'var(--primary-200)',
 					230: 'var(--primary-230)',
 					330: 'var(--primary-330)',
@@ -39,7 +53,9 @@ export default {
 					460: 'var(--primary-460)',
 					500: 'var(--primary-500)',
 					600: 'var(--primary-600)',
+					630: 'var(--primary-630)',
 					700: 'var(--primary-700)',
+					860: 'var(--primary-860)',
 				},
 				red: {
 					345: 'var(--red-345)',
