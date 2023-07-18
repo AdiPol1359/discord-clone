@@ -1,5 +1,7 @@
 import { Input } from './Input';
 
+import ArrowDown from '@/assets/svg/arrow-down.svg';
+
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
@@ -16,5 +18,11 @@ export const Default: Story = {};
 export const Placeholder: Story = {
 	args: {
 		placeholder: 'Example placeholder',
+	},
+};
+
+export const Icon: Story = {
+	args: {
+		icon: <ArrowDown />,
 	},
 };
