@@ -16,11 +16,11 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
 		const id = useId();
 
 		return (
-			<div className="space-y-1">
+			<div className="space-y-2">
 				<label
 					htmlFor={id}
 					className={twMerge(
-						'flex gap-x-1 text-xs font-extrabold uppercase text-header-secondary',
+						'flex gap-x-1 text-xs font-bold uppercase text-header-secondary',
 						error && 'text-text-danger',
 					)}
 				>

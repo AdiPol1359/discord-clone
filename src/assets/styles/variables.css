@@ -12,6 +12,7 @@
 	--primary-400-hsl: 223 calc(var(--saturation-factor) * 5.8%) 52.9%;
 	--primary-500-hsl: 228 calc(var(--saturation-factor) * 6%) 32.5%;
 
+	--primary-100: hsl(0 calc(var(--saturation-factor) * 0%) 97.6%);
 	--primary-130: hsl(220 calc(var(--saturation-factor) * 13%) 95.5%);
 	--primary-200: hsl(216 calc(var(--saturation-factor) * 9.8%) 90%);
 	--primary-230: hsl(210 calc(var(--saturation-factor) * 9.1%) 87.1%);
@@ -35,6 +36,8 @@
 	--background-secondary: var(--primary-130);
 	--background-tertiary: var(--primary-200);
 
+	--background-mobile-primary: var(--primary-100);
+
 	--background-modifier-hover: hsl(var(--primary-400-hsl) / 0.16);
 	--background-modifier-selected: hsl(var(--primary-400-hsl) / 0.24);
 
@@ -44,6 +47,7 @@
 	--brand-experiment-560: var(--brand-560);
 	--brand-experiment-600: var(--brand-600);
 
+	--header-primary: var(--primary-860);
 	--header-secondary: var(--primary-500);
 
 	--input-background: var(--primary-200);
@@ -64,9 +68,12 @@
 	--background-secondary: var(--primary-630);
 	--background-tertiary: var(--primary-700);
 
+	--background-mobile-primary: var(--primary-600);
+
 	--background-modifier-hover: hsl(var(--primary-500-hsl) / 0.3);
 	--background-modifier-selected: hsl(var(--primary-500-hsl) / 0.6);
 
+	--header-primary: var(--primary-130);
 	--header-secondary: var(--primary-330);
 
 	--input-background: var(--primary-700);

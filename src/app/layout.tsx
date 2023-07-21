@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className={ggSans.variable}>
-			<body>{children}</body>
+			<body className="flex h-screen flex-col">{children}</body>
 			<WhatInput />
 		</html>
 	);

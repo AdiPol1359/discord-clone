@@ -28,7 +28,7 @@ const ExampleAutocomplete = () => {
 			placeholder="Example autocomplete"
 			data={['1', '11', '111']}
 			value={value}
-			setValue={setValue}
+			onChange={setValue}
 		/>
 	);
 };
