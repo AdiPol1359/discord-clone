@@ -1,5 +1,5 @@
-import { WhatInput } from '@/components/WhatInput';
 import { ggSans } from '@/lib/fonts';
+import { UIProvider } from '@/ui/providers/UIProvider';
 
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
@@ -19,8 +19,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className={ggSans.variable}>
-			<body className="flex h-screen flex-col">{children}</body>
-			<WhatInput />
+			<body className="flex h-screen flex-col">
+				<UIProvider>{children}</UIProvider>
+			</body>
 		</html>
 	);
 }

@@ -1,6 +1,2 @@
 @import url('./tailwind.css');
 @import url('./variables.css');
-
-[data-whatintent='keyboard'] *:focus {
-	@apply ring-4 ring-text-link;
-}
