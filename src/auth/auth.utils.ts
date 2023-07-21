@@ -15,7 +15,7 @@ export const generateMonths = () => {
 	);
 };
 
-export const generateXd = () => ({
+export const generateCalendar = () => ({
 	days: generateDays(),
 	months: generateMonths(),
 	years: generateYears(),

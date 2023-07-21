@@ -5,7 +5,7 @@ import { Controller } from 'react-hook-form';
 import { AuthForm } from '../AuthForm';
 import { useSignUpForm } from './useSignUpForm';
 
-import { generateXd } from '@/auth/auth.utils';
+import { generateCalendar } from '@/auth/auth.utils';
 import { Anchor } from '@/components/Anchor/Anchor';
 import { Autocomplete } from '@/components/Autocomplete/Autocomplete';
 import { Button } from '@/components/Button/Button';
@@ -13,7 +13,7 @@ import { Checkbox } from '@/components/Checkbox/Checkbox';
 import { ControlsGroup } from '@/components/ControlsGroup/ControlsGroup';
 import { TextField } from '@/components/TextField/TextField';
 
-const { days, months, years } = generateXd();
+const { days, months, years } = generateCalendar();
 
 export const SignUpForm = () => {
 	const {
