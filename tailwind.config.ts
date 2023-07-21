@@ -9,6 +9,7 @@ export default {
 		extend: {
 			animation: {
 				auth: 'auth 0.25s',
+				loading: 'loading 1.4s ease-in-out infinite',
 			},
 			colors: {
 				background: {
@@ -90,6 +91,11 @@ export default {
 			keyframes: {
 				auth: {
 					'0%': { opacity: '0', scale: '1.07', transform: 'translateY(-75px)' },
+				},
+				loading: {
+					'0%': { opacity: '1', transform: 'scale(1)' },
+					'50%': { opacity: '0.3', transform: 'scale(0.8)' },
+					'100%': { opacity: '1', transform: 'scale(1)' },
 				},
 			},
 		},
