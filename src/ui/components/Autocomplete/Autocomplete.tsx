@@ -6,7 +6,7 @@ import { twMerge } from 'tailwind-merge';
 
 import { Input } from '../Input/Input';
 
-import ArrowDown from '@/ui/assets/arrow-down.svg';
+import ArrowDown from '@/ui/assets/svg/arrow-down.svg';
 
 import type { FocusEventHandler } from 'react';
 
