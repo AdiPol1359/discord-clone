@@ -3,9 +3,9 @@
 import { AuthForm } from '../AuthForm';
 import { useSignInForm } from './useSignInForm';
 
-import { Anchor } from '@/components/Anchor/Anchor';
-import { Button } from '@/components/Button/Button';
-import { TextField } from '@/components/TextField/TextField';
+import { Anchor } from '@/ui/components/Anchor/Anchor';
+import { Button } from '@/ui/components/Button/Button';
+import { TextField } from '@/ui/components/TextField/TextField';
 
 export const SignInForm = () => {
 	const {

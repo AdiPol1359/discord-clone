@@ -1,6 +1,6 @@
 import { Input } from './Input';
 
-import ArrowDown from '@/assets/svg/arrow-down.svg';
+import ArrowDown from '@/ui/assets/arrow-down.svg';
 
 import type { Meta, StoryObj } from '@storybook/react';
 

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-import Checkmark from '@/assets/svg/checkmark.svg';
+import Checkmark from '@/ui/assets/checkmark.svg';
 
 import type { ChangeEventHandler, FocusEventHandler, ReactNode } from 'react';
 
