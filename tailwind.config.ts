@@ -7,10 +7,16 @@ export default {
 	darkMode: 'class',
 	theme: {
 		extend: {
+			animation: {
+				auth: 'auth 0.25s',
+			},
 			colors: {
 				background: {
 					secondary: 'var(--background-secondary)',
 					tertiary: 'var(--background-tertiary)',
+				},
+				'background-mobile': {
+					primary: 'var(--background-mobile-primary)',
 				},
 				'background-modifier': {
 					hover: 'var(--background-modifier-hover)',
@@ -33,6 +39,7 @@ export default {
 					600: 'var(--brand-experiment-600)',
 				},
 				header: {
+					primary: 'var(--header-primary)',
 					secondary: 'var(--header-secondary)',
 				},
 				input: {
@@ -44,6 +51,7 @@ export default {
 					normal: 'var(--interactive-normal)',
 				},
 				primary: {
+					100: 'var(--primary-100)',
 					130: 'var(--primary-130)',
 					200: 'var(--primary-200)',
 					230: 'var(--primary-230)',
@@ -78,6 +86,11 @@ export default {
 			},
 			fontFamily: {
 				sans: ['var(--font-gg-sans)', ...defaultTheme.fontFamily.sans],
+			},
+			keyframes: {
+				auth: {
+					'0%': { opacity: '0', scale: '1.07', transform: 'translateY(-75px)' },
+				},
 			},
 		},
 	},

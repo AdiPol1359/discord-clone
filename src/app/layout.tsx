@@ -18,8 +18,8 @@ export default function RootLayout({
 	readonly children: ReactNode;
 }) {
 	return (
-		<html lang="en" className={ggSans.variable}>
-			<body>{children}</body>
+		<html lang="en" className={`${ggSans.variable} dark`}>
+			<body className="flex h-screen flex-col">{children}</body>
 			<WhatInput />
 		</html>
 	);
