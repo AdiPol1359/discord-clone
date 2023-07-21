@@ -20,7 +20,7 @@ type InternalAnchorProps<T> = Readonly<{
 type AnchorProps<T> = SharedAnchorProps &
 	(ExternalAnchorProps | InternalAnchorProps<T>);
 
-const STYLES = 'font-medium text-text-link hover:underline';
+const STYLES = 'font-medium text-text-link hover:underline focus:outline-0';
 
 export const Anchor = <T,>({ external, href, children }: AnchorProps<T>) => {
 	if (external) {

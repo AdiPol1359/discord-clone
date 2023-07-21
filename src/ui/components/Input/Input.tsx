@@ -46,7 +46,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 				onChange={onChange}
 				onBlur={onBlur}
 				className={twJoin(
-					'w-full rounded bg-input-background p-2.5 text-text-normal placeholder-text-muted focus:outline-none',
+					'w-full rounded bg-input-background p-2.5 text-text-normal placeholder-text-muted focus:outline-0',
 					icon && 'pr-9',
 				)}
 				{...(!autoComplete && { autoComplete: 'off' })}

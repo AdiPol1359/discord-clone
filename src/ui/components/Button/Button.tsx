@@ -22,7 +22,7 @@ export const Button = ({
 		disabled={disabled}
 		onClick={onClick}
 		className={twMerge(
-			'h-11 w-fit rounded bg-brand-experiment px-4 font-medium text-white-500 transition-colors duration-200 enabled:hover:bg-brand-experiment-560 enabled:active:bg-brand-experiment-600 disabled:cursor-not-allowed disabled:opacity-50',
+			'h-11 w-fit rounded bg-brand-experiment px-4 font-medium text-white-500 transition-colors duration-200 focus:outline-0 enabled:hover:bg-brand-experiment-560 enabled:active:bg-brand-experiment-600 disabled:cursor-not-allowed disabled:opacity-50',
 			fill && 'w-full',
 		)}
 	>
