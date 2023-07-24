@@ -8,15 +8,16 @@ import { useSignUpForm } from './useSignUpForm';
 import { generateCalendar } from '@/auth/auth.utils';
 import { Anchor } from '@/ui/components/Anchor/Anchor';
 import { Autocomplete } from '@/ui/components/Autocomplete/Autocomplete';
-import { Button } from '@/ui/components/Button/Button';
 import { Checkbox } from '@/ui/components/Checkbox/Checkbox';
 import { ControlsGroup } from '@/ui/components/ControlsGroup/ControlsGroup';
+import { LoadingButton } from '@/ui/components/LoadingButton/LoadingButton';
 import { TextField } from '@/ui/components/TextField/TextField';
 
 const { days, months, years } = generateCalendar();
 
 export const SignUpForm = () => {
 	const {
+		isLoading,
 		handleFormSubmit,
 		control,
 		register,
@@ -72,9 +73,9 @@ export const SignUpForm = () => {
 					)}
 				/>
 			</ControlsGroup>
-			<Button type="submit" fill>
+			<LoadingButton type="submit" loading={isLoading} fill>
 				Continue
-			</Button>
+			</LoadingButton>
 			<Checkbox
 				label={
 					<div>
