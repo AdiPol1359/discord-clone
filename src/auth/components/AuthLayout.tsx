@@ -9,7 +9,7 @@ type AuthLayoutProps = Readonly<{
 
 export const AuthLayout = ({ children }: AuthLayoutProps) => (
 	<PrivateRoute loggedIn={false}>
-		<main className="z-10 flex flex-1 items-center justify-center">
+		<main className="theme-dark z-10 flex flex-1 items-center justify-center">
 			{children}
 		</main>
 		<AuthBackground
