@@ -28,7 +28,7 @@ export const PrivateRoute = ({
 		}
 	}, [loggedIn, isLoading, session, replace]);
 
-	if (Boolean(session) !== loggedIn) {
+	if (isLoading || Boolean(session) !== loggedIn) {
 		return null;
 	}
 
