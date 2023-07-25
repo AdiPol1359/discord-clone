@@ -4,11 +4,12 @@ import { AuthForm } from '../AuthForm';
 import { useSignInForm } from './useSignInForm';
 
 import { Anchor } from '@/ui/components/Anchor/Anchor';
-import { Button } from '@/ui/components/Button/Button';
+import { LoadingButton } from '@/ui/components/LoadingButton/LoadingButton';
 import { TextField } from '@/ui/components/TextField/TextField';
 
 export const SignInForm = () => {
 	const {
+		isLoading,
 		handleFormSubmit,
 		register,
 		formState: { errors },
@@ -36,9 +37,9 @@ export const SignInForm = () => {
 				required
 				{...register('password')}
 			/>
-			<Button type="submit" fill>
+			<LoadingButton type="submit" loading={isLoading} fill>
 				Log In
-			</Button>
+			</LoadingButton>
 			<div className="text-sm text-text-muted">
 				Need an account? <Anchor href="/register">Register</Anchor>
 			</div>
