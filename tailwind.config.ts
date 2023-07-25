@@ -4,7 +4,7 @@ import type { Config } from 'tailwindcss';
 
 export default {
 	content: ['./src/**/*.{ts,tsx}'],
-	darkMode: 'class',
+	darkMode: ['class', '.theme-dark'],
 	theme: {
 		extend: {
 			animation: {
