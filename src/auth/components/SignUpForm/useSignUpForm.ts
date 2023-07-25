@@ -6,12 +6,9 @@ import { capitalize } from '@/utils/string';
 
 export const useSignUpForm = () => {
 	const { value: isLoading, setTrue, setFalse } = useBoolean();
-	const { handleSubmit, setError, reset, ...rest } = useZodForm(
-		signUpFormSchema,
-		{
-			defaultValues: { day: '', month: '', year: '' },
-		},
-	);
+	const { handleSubmit, setError, ...rest } = useZodForm(signUpFormSchema, {
+		defaultValues: { day: '', month: '', year: '' },
+	});
 
 	const handleFormSubmit = handleSubmit(
 		async ({ username, email, password, day, month, year }) => {
@@ -24,9 +21,6 @@ export const useSignUpForm = () => {
 					bornAt: new Date(`${day} ${month}, ${year}`),
 				},
 				{
-					onSuccess: () => {
-						reset();
-					},
 					onAlreadyExists: (target) => {
 						setError(target, {
 							message: `${capitalize(target)} is already registered`,
