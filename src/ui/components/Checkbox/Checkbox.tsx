@@ -29,9 +29,12 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
 				type="checkbox"
 				className="peer hidden"
 			/>
-			<div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-primary-400 peer-checked:border-brand-experiment-400 peer-checked:bg-brand-experiment-500 [&>*]:opacity-0 peer-checked:[&>*]:opacity-100">
+			<button
+				type="button"
+				className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-primary-400 focus:outline-0 peer-checked:border-brand-experiment-400 peer-checked:bg-brand-experiment-500 [&>*]:opacity-0 peer-checked:[&>*]:opacity-100"
+			>
 				<Checkmark aria-hidden="true" />
-			</div>
+			</button>
 			{label}
 		</label>
 	),
