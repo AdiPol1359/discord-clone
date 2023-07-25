@@ -37,18 +37,16 @@ export const signUp = async (
 		password,
 		options: { data: { username, bornAt } },
 	});
+	const { message } = error || {};
 
-	if (error) {
-		const { message } = error;
-		const target =
-			message === EMAIL_ERROR_MESSAGE
-				? 'email'
-				: message === USERNAME_ERROR_MESSAGE
-				? 'username'
-				: null;
+	const target =
+		message === EMAIL_ERROR_MESSAGE
+			? 'email'
+			: message === USERNAME_ERROR_MESSAGE
+			? 'username'
+			: null;
 
-		if (target) {
-			onAlreadyExists?.(target);
-		}
+	if (target) {
+		onAlreadyExists?.(target);
 	}
 };
