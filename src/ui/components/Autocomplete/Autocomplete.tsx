@@ -41,7 +41,7 @@ export const Autocomplete = forwardRef<HTMLInputElement, AutocompleteProps>(
 						onChange={({ target }) => setQuery(target.value)}
 						onBlur={onBlur}
 					/>
-					<Combobox.Options className="absolute bottom-full max-h-52 w-full overflow-auto rounded-b border border-background-tertiary bg-background-secondary shadow-sm">
+					<Combobox.Options className="absolute bottom-full max-h-52 w-full overflow-auto rounded-b border border-background-tertiary bg-background-secondary shadow-md shadow-black/20">
 						{options.length === 0 ? (
 							<p className="py-2 text-center leading-4 text-[#999]">
 								Brak wyników
