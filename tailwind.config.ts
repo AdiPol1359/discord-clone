@@ -64,6 +64,7 @@ export default {
 					600: 'var(--primary-600)',
 					630: 'var(--primary-630)',
 					700: 'var(--primary-700)',
+					730: 'var(--primary-730)',
 					860: 'var(--primary-860)',
 				},
 				red: {
@@ -71,6 +72,9 @@ export default {
 					400: 'var(--red-400)',
 					430: 'var(--red-430)',
 					500: 'var(--red-500)',
+				},
+				'scrollbar-thin': {
+					thumb: 'var(--scrollbar-thin-thumb)',
 				},
 				status: {
 					danger: 'var(--status-danger)',

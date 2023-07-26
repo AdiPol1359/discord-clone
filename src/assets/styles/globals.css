@@ -1,2 +1,10 @@
 @import url('./tailwind.css');
 @import url('./variables.css');
+
+*::-webkit-scrollbar {
+	@apply w-2 px-0.5;
+}
+
+*::-webkit-scrollbar-thumb {
+	@apply rounded-md border-2 border-solid border-transparent bg-scrollbar-thin-thumb bg-clip-padding;
+}
