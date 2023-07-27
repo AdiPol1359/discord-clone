@@ -12,6 +12,7 @@
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
 		"test": "vitest",
+		"cypress:open": "cypress open",
 		"prepare": "husky install"
 	},
 	"dependencies": {
@@ -47,11 +48,13 @@
 		"@typescript-eslint/parser": "5.62.0",
 		"@vitejs/plugin-react": "4.0.3",
 		"autoprefixer": "10.4.14",
+		"cypress": "12.17.2",
 		"encoding": "0.1.13",
 		"eslint": "8.45.0",
 		"eslint-config-next": "13.4.10",
 		"eslint-config-prettier": "8.8.0",
 		"eslint-import-resolver-typescript": "3.5.5",
+		"eslint-plugin-cypress": "2.13.3",
 		"eslint-plugin-import": "2.27.5",
 		"eslint-plugin-prettier": "5.0.0",
 		"eslint-plugin-simple-import-sort": "10.0.0",
