@@ -27,8 +27,9 @@ export const SignUpForm = () => {
 	return (
 		<AuthForm title="Create an account" onSubmit={handleFormSubmit}>
 			<TextField
-				label="Email"
+				testId="email"
 				type="email"
+				label="Email"
 				autoComplete={false}
 				spellCheck={false}
 				error={errors.email?.message}
@@ -36,6 +37,7 @@ export const SignUpForm = () => {
 				{...register('email')}
 			/>
 			<TextField
+				testId="username"
 				label="Username"
 				autoComplete={false}
 				spellCheck={false}
@@ -44,8 +46,9 @@ export const SignUpForm = () => {
 				{...register('username')}
 			/>
 			<TextField
-				label="Password"
+				testId="password"
 				type="password"
+				label="Password"
 				error={errors.password?.message}
 				required
 				{...register('password')}
@@ -55,28 +58,44 @@ export const SignUpForm = () => {
 					name="day"
 					control={control}
 					render={({ field }) => (
-						<Autocomplete placeholder="Day" data={days} {...field} />
+						<Autocomplete
+							testId="day"
+							placeholder="Day"
+							data={days}
+							{...field}
+						/>
 					)}
 				/>
 				<Controller
 					name="month"
 					control={control}
 					render={({ field }) => (
-						<Autocomplete placeholder="Month" data={months} {...field} />
+						<Autocomplete
+							testId="month"
+							placeholder="Month"
+							data={months}
+							{...field}
+						/>
 					)}
 				/>
 				<Controller
 					name="year"
 					control={control}
 					render={({ field }) => (
-						<Autocomplete placeholder="Year" data={years} {...field} />
+						<Autocomplete
+							testId="year"
+							placeholder="Year"
+							data={years}
+							{...field}
+						/>
 					)}
 				/>
 			</ControlsGroup>
-			<LoadingButton type="submit" loading={isLoading} fill>
+			<LoadingButton testId="submit" type="submit" loading={isLoading} fill>
 				Continue
 			</LoadingButton>
 			<Checkbox
+				testId="rules"
 				label={
 					<div>
 						I have read and agree to Discord&apos;s{' '}

@@ -22,8 +22,9 @@ export const SignInForm = () => {
 			onSubmit={handleFormSubmit}
 		>
 			<TextField
-				label="Email or Phone Number"
+				testId="email"
 				type="email"
+				label="Email or Phone Number"
 				autoComplete={false}
 				spellCheck={false}
 				error={errors?.email?.message}
@@ -31,13 +32,14 @@ export const SignInForm = () => {
 				{...register('email')}
 			/>
 			<TextField
-				label="Password"
+				testId="password"
 				type="password"
+				label="Password"
 				error={errors?.password?.message}
 				required
 				{...register('password')}
 			/>
-			<LoadingButton type="submit" loading={isLoading} fill>
+			<LoadingButton testId="submit" type="submit" loading={isLoading} fill>
 				Log In
 			</LoadingButton>
 			<div className="text-sm text-text-muted">

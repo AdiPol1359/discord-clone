@@ -10,6 +10,8 @@ import type {
 	ReactNode,
 } from 'react';
 
+import type { SharedComponentProps } from '@/ui/ui.types';
+
 type InputProps = Readonly<{
 	id?: string;
 	name?: string;
@@ -28,7 +30,8 @@ type InputProps = Readonly<{
 	onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
 	onCompositionStart?: CompositionEventHandler<HTMLInputElement>;
 	onCompositionEnd?: CompositionEventHandler<HTMLInputElement>;
-}>;
+}> &
+	SharedComponentProps;
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
 	(
@@ -45,6 +48,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 			disabled,
 			required,
 			icon,
+			testId,
 			onBlur,
 			onChange,
 			onKeyDown,
@@ -71,6 +75,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 				onKeyDown={onKeyDown}
 				onCompositionStart={onCompositionStart}
 				onCompositionEnd={onCompositionEnd}
+				data-test={testId}
 				className={twJoin(
 					'w-full rounded bg-input-background p-2.5 text-text-normal placeholder-text-muted focus:outline-0',
 					icon && 'pr-9',
