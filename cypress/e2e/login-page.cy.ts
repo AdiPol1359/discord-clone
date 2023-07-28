@@ -1,5 +1,5 @@
 describe('The Login Page', () => {
-	it('should ', () => {
+	it('should redirect to the app after successful login', () => {
 		cy.intercept('POST', '/auth/v1/token?grant_type=password', {
 			fixture: 'session.json',
 		}).as('login');

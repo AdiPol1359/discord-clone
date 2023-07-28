@@ -1,5 +1,5 @@
-describe('The Login Page', () => {
-	it('should ', () => {
+describe('The Register Page', () => {
+	it('should redirect to the app after successful registration', () => {
 		cy.intercept('POST', '/auth/v1/signup', {
 			fixture: 'session.json',
 		}).as('register');
