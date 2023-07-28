@@ -15,5 +15,7 @@ describe('The Login Page', () => {
 		cy.getByTestId('email').type('foo@gmail.com');
 		cy.getByTestId('username').type('foo');
 		cy.getByTestId('password').type('foobar123{enter}');
+
+		cy.url().should('include', '/app');
 	});
 });
