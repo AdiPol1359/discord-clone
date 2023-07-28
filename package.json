@@ -12,6 +12,7 @@
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
 		"test": "vitest",
+		"cypress:run": "cypress run",
 		"cypress:open": "cypress open",
 		"prepare": "husky install"
 	},
