@@ -34,10 +34,10 @@ export const Anchor = <T,>({
 	if (external) {
 		return (
 			<a
+				data-test={testId}
 				href={href}
 				target="_blank"
 				rel="noreferrer noopener"
-				data-test={testId}
 				className={STYLES}
 			>
 				{children}
@@ -46,7 +46,7 @@ export const Anchor = <T,>({
 	}
 
 	return (
-		<Link href={href} data-test={testId} className={STYLES}>
+		<Link data-test={testId} href={href} className={STYLES}>
 			{children}
 		</Link>
 	);

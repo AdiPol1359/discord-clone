@@ -62,6 +62,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 			<input
 				ref={ref}
 				id={id}
+				data-test={testId}
 				name={name}
 				role={role}
 				type={type}
@@ -75,7 +76,6 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 				onKeyDown={onKeyDown}
 				onCompositionStart={onCompositionStart}
 				onCompositionEnd={onCompositionEnd}
-				data-test={testId}
 				className={twJoin(
 					'w-full rounded bg-input-background p-2.5 text-text-normal placeholder-text-muted focus:outline-0',
 					icon && 'pr-9',

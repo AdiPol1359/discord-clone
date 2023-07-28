@@ -22,10 +22,10 @@ export const Button = ({
 	children,
 }: ButtonProps) => (
 	<button
+		data-test={testId}
 		type={type}
 		disabled={disabled}
 		onClick={onClick}
-		data-test={testId}
 		className={twMerge(
 			'h-11 w-fit rounded bg-brand-experiment px-4 font-medium text-white-500 transition-colors duration-200 focus:outline-0 enabled:hover:bg-brand-experiment-560 enabled:active:bg-brand-experiment-600 disabled:cursor-not-allowed disabled:opacity-50',
 			fill && 'w-full',

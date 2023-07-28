@@ -23,7 +23,7 @@ type AutocompleteProps = Readonly<{
 	SharedComponentProps;
 
 export const Autocomplete = forwardRef<HTMLInputElement, AutocompleteProps>(
-	({ name, placeholder, data, value, testId, onChange, onBlur }, ref) => {
+	({ name, placeholder, data, value, onChange, onBlur, testId }, ref) => {
 		const [query, setQuery] = useState('');
 
 		const options = query
@@ -37,8 +37,8 @@ export const Autocomplete = forwardRef<HTMLInputElement, AutocompleteProps>(
 						as={Input}
 						ref={ref}
 						name={name}
-						placeholder={placeholder}
 						testId={testId}
+						placeholder={placeholder}
 						autoComplete={false}
 						spellCheck={false}
 						icon={<ArrowDown />}
