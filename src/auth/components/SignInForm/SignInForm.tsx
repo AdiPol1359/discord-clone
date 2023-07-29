@@ -39,7 +39,7 @@ export const SignInForm = () => {
 				required
 				{...register('password')}
 			/>
-			<LoadingButton testId="submit" type="submit" loading={isLoading} fill>
+			<LoadingButton type="submit" loading={isLoading} fill>
 				Log In
 			</LoadingButton>
 			<div className="text-sm text-text-muted">

@@ -91,7 +91,7 @@ export const SignUpForm = () => {
 					)}
 				/>
 			</ControlsGroup>
-			<LoadingButton testId="submit" type="submit" loading={isLoading} fill>
+			<LoadingButton type="submit" loading={isLoading} fill>
 				Continue
 			</LoadingButton>
 			<Checkbox
