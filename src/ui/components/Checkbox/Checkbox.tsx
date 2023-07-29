@@ -5,17 +5,21 @@ import Checkmark from '@/ui/assets/svg/checkmark.svg';
 
 import type { ChangeEventHandler, FocusEventHandler, ReactNode } from 'react';
 
+import type { SharedComponentProps } from '@/ui/ui.types';
+
 type CheckboxProps = Readonly<{
 	muted?: boolean;
 	name?: string;
 	onChange?: ChangeEventHandler<HTMLInputElement>;
 	onBlur?: FocusEventHandler<HTMLInputElement>;
 	label: ReactNode;
-}>;
+}> &
+	SharedComponentProps;
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-	({ muted, name, onChange, onBlur, label }, ref) => (
+	({ muted, name, onChange, onBlur, label, testId }, ref) => (
 		<label
+			data-test={testId}
 			className={twMerge(
 				'flex w-fit cursor-pointer items-center gap-x-2 text-xs font-medium text-text-normal',
 				muted && 'text-text-muted',

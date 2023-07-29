@@ -10,6 +10,8 @@ import ArrowDown from '@/ui/assets/svg/arrow-down.svg';
 
 import type { FocusEventHandler } from 'react';
 
+import type { SharedComponentProps } from '@/ui/ui.types';
+
 type AutocompleteProps = Readonly<{
 	name?: string;
 	placeholder?: string;
@@ -17,10 +19,11 @@ type AutocompleteProps = Readonly<{
 	value: string;
 	onChange: (value: string) => void;
 	onBlur?: FocusEventHandler<HTMLInputElement>;
-}>;
+}> &
+	SharedComponentProps;
 
 export const Autocomplete = forwardRef<HTMLInputElement, AutocompleteProps>(
-	({ name, placeholder, data, value, onChange, onBlur }, ref) => {
+	({ name, placeholder, data, value, onChange, onBlur, testId }, ref) => {
 		const [query, setQuery] = useState('');
 
 		const options = query
@@ -34,6 +37,7 @@ export const Autocomplete = forwardRef<HTMLInputElement, AutocompleteProps>(
 						as={Input}
 						ref={ref}
 						name={name}
+						testId={testId}
 						placeholder={placeholder}
 						autoComplete={false}
 						spellCheck={false}

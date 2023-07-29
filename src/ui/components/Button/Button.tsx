@@ -2,22 +2,27 @@ import { twMerge } from 'tailwind-merge';
 
 import type { ReactNode } from 'react';
 
+import type { SharedComponentProps } from '@/ui/ui.types';
+
 type ButtonProps = Readonly<{
 	type?: 'button' | 'reset' | 'submit';
 	fill?: boolean;
 	disabled?: boolean;
 	onClick?: () => void;
 	children: ReactNode;
-}>;
+}> &
+	SharedComponentProps;
 
 export const Button = ({
 	type = 'button',
 	fill,
 	disabled,
 	onClick,
+	testId,
 	children,
 }: ButtonProps) => (
 	<button
+		data-test={testId}
 		type={type}
 		disabled={disabled}
 		onClick={onClick}

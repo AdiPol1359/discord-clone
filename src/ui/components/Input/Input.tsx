@@ -10,6 +10,8 @@ import type {
 	ReactNode,
 } from 'react';
 
+import type { SharedComponentProps } from '@/ui/ui.types';
+
 type InputProps = Readonly<{
 	id?: string;
 	name?: string;
@@ -28,7 +30,8 @@ type InputProps = Readonly<{
 	onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
 	onCompositionStart?: CompositionEventHandler<HTMLInputElement>;
 	onCompositionEnd?: CompositionEventHandler<HTMLInputElement>;
-}>;
+}> &
+	SharedComponentProps;
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
 	(
@@ -45,6 +48,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 			disabled,
 			required,
 			icon,
+			testId,
 			onBlur,
 			onChange,
 			onKeyDown,
@@ -58,6 +62,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 			<input
 				ref={ref}
 				id={id}
+				data-test={testId}
 				name={name}
 				role={role}
 				type={type}
