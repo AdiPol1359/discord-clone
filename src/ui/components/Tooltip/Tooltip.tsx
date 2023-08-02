@@ -13,5 +13,3 @@ export const Tooltip = ({ children }: TooltipProps) => <Root>{children}</Root>;
 
 Tooltip.Trigger = TooltipTrigger;
 Tooltip.Content = TooltipContent;
-
-// TODO: STORY
