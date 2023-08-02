@@ -9,6 +9,8 @@
 	--brand-560: hsl(235 calc(var(--saturation-factor) * 51.4%) 52.4%);
 	--brand-600: hsl(235 calc(var(--saturation-factor) * 46.7%) 44.1%);
 
+	--green-360: hsl(145 calc(var(--saturation-factor) * 65%) 39.2%);
+
 	--primary-400-hsl: 223 calc(var(--saturation-factor) * 5.8%) 52.9%;
 	--primary-500-hsl: 228 calc(var(--saturation-factor) * 6%) 32.5%;
 
@@ -25,6 +27,7 @@
 	--primary-630: hsl(220 calc(var(--saturation-factor) * 6.5%) 18%);
 	--primary-700: hsl(225 calc(var(--saturation-factor) * 6.3%) 12.5%);
 	--primary-730: hsl(225 calc(var(--saturation-factor) * 7.1%) 11%);
+	--primary-800: hsl(220 calc(var(--saturation-factor) * 8.1%) 7.3%);
 	--primary-860: hsl(240 calc(var(--saturation-factor) * 7.7%) 2.5%);
 
 	--red-345: hsl(358 calc(var(--saturation-factor) * 92.9%) 72.4%);
@@ -34,11 +37,14 @@
 
 	--white-500: hsl(0 calc(var(--saturation-factor) * 0%) 100%);
 
+	--background-floating: var(--white-500);
+	--background-primary: var(--white-500);
 	--background-secondary: var(--primary-130);
 	--background-tertiary: var(--primary-200);
 
 	--background-mobile-primary: var(--primary-100);
 
+	--background-modifier-accent: hsl(var(--primary-400-hsl) / 0.24);
 	--background-modifier-hover: hsl(var(--primary-400-hsl) / 0.16);
 	--background-modifier-selected: hsl(var(--primary-400-hsl) / 0.24);
 
@@ -68,11 +74,14 @@
 }
 
 .theme-dark {
+	--background-floating: var(--primary-800);
+	--background-primary: var(--primary-600);
 	--background-secondary: var(--primary-630);
 	--background-tertiary: var(--primary-700);
 
 	--background-mobile-primary: var(--primary-600);
 
+	--background-modifier-accent: hsl(var(--primary-500-hsl) / 0.48);
 	--background-modifier-hover: hsl(var(--primary-500-hsl) / 0.3);
 	--background-modifier-selected: hsl(var(--primary-500-hsl) / 0.6);
 
