@@ -8,7 +8,7 @@ import { Tooltip } from '@/ui/components/Tooltip/Tooltip';
 import type { LinkProps } from 'next/link';
 import type { ReactNode } from 'react';
 
-const variants: Record<NavigationItemType, string> = {
+const variants: Record<UserGuildsNavigationItemType, string> = {
 	link: 'text-text-normal hover:bg-brand-experiment',
 	button: 'text-green-360 hover:bg-green-360',
 };
@@ -16,27 +16,30 @@ const variants: Record<NavigationItemType, string> = {
 const ITEM_STYLES =
 	'mx-auto flex h-12 w-12 items-center justify-center rounded-3xl bg-background-primary text-lg font-medium transition-all duration-200 hover:rounded-2xl hover:text-white-500 focus:outline-0';
 
-type NavigationItemType = NavigationItemProps<unknown>['type'];
+type UserGuildsNavigationItemType =
+	UserGuildsNavigationItemProps<unknown>['type'];
 
-type SharedNavigationItemProps = Readonly<{
+type SharedUserGuildsNavigationItemProps = Readonly<{
 	tooltip: string;
 	children: ReactNode;
 }>;
 
-type ButtonNavigationItemProps = Readonly<{
+type ButtonUserGuildsNavigationItemProps = Readonly<{
 	type: 'button';
 	onClick?: () => void;
 }>;
 
-type LinkNavigationItemProps<T> = Readonly<{
+type LinkUserGuildsNavigationItemProps<T> = Readonly<{
 	type: 'link';
 	href: LinkProps<T>['href'];
 }>;
 
-type NavigationItemProps<T> = SharedNavigationItemProps &
-	(ButtonNavigationItemProps | LinkNavigationItemProps<T>);
+type UserGuildsNavigationItemProps<T> = SharedUserGuildsNavigationItemProps &
+	(ButtonUserGuildsNavigationItemProps | LinkUserGuildsNavigationItemProps<T>);
 
-export const NavigationItem = <T,>(props: NavigationItemProps<T>) => {
+export const UserGuildsNavigationItem = <T,>(
+	props: UserGuildsNavigationItemProps<T>,
+) => {
 	const { type, tooltip, children } = props;
 
 	const styles = twJoin(ITEM_STYLES, variants[type]);

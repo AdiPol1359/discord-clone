@@ -1,4 +1,4 @@
-import { NavigationItem } from './NavigationItem';
+import { UserGuildsNavigationItem } from './UserGuildsNavigationItem';
 
 import AddIcon from '@/guilds/assets/add.svg';
 import DiscordLogoIcon from '@/guilds/assets/discord-logo.svg';
@@ -7,9 +7,13 @@ export const UserGuildsNavigation = () => (
 	<nav className="scrollbar-none h-full w-18 overflow-auto bg-background-tertiary pb-2 pt-3">
 		<ul>
 			<li>
-				<NavigationItem type="link" href="/app" tooltip="Direct messages">
+				<UserGuildsNavigationItem
+					type="link"
+					href="/app"
+					tooltip="Direct messages"
+				>
 					<DiscordLogoIcon aria-hidden="true" />
-				</NavigationItem>
+				</UserGuildsNavigationItem>
 			</li>
 		</ul>
 		<div
@@ -18,24 +22,24 @@ export const UserGuildsNavigation = () => (
 		/>
 		<ul className="space-y-2">
 			<li>
-				<NavigationItem type="link" href="#" tooltip="Foo">
+				<UserGuildsNavigationItem type="link" href="#" tooltip="Foo">
 					F
-				</NavigationItem>
+				</UserGuildsNavigationItem>
 			</li>
 			<li>
-				<NavigationItem type="link" href="#" tooltip="Bar">
+				<UserGuildsNavigationItem type="link" href="#" tooltip="Bar">
 					B
-				</NavigationItem>
+				</UserGuildsNavigationItem>
 			</li>
 			<li>
-				<NavigationItem type="link" href="#" tooltip="Baz">
+				<UserGuildsNavigationItem type="link" href="#" tooltip="Baz">
 					B
-				</NavigationItem>
+				</UserGuildsNavigationItem>
 			</li>
 			<li>
-				<NavigationItem type="button" tooltip="Add a server">
+				<UserGuildsNavigationItem type="button" tooltip="Add a server">
 					<AddIcon aria-hidden="true" />
-				</NavigationItem>
+				</UserGuildsNavigationItem>
 			</li>
 		</ul>
 	</nav>
