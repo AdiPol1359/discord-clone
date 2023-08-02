@@ -15,7 +15,7 @@ export const TooltipContent = ({
 		<Content
 			side={position}
 			sideOffset={15}
-			className="rounded-md bg-background-floating px-3 py-2 font-semibold leading-5 text-text-normal shadow-lg"
+			className="theme-dark rounded-md bg-background-floating px-3 py-2 font-semibold leading-5 text-text-normal shadow-lg"
 		>
 			{children}
 			<Arrow className="fill-background-floating" />
