@@ -11,5 +11,5 @@ type TooltipProps = Readonly<{
 
 export const Tooltip = ({ children }: TooltipProps) => <Root>{children}</Root>;
 
-Tooltip.Trigger = TooltipTrigger;
 Tooltip.Content = TooltipContent;
+Tooltip.Trigger = TooltipTrigger;
