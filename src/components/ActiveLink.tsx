@@ -30,4 +30,7 @@ const ActiveLinkInner = <T,>(
 	);
 };
 
-export const ActiveLink = forwardRef(ActiveLinkInner);
+export const ActiveLink = forwardRef(ActiveLinkInner) as <T>(
+	props: ActiveLinkInnerProps<T>,
+	ref: Ref<HTMLAnchorElement>,
+) => ReturnType<typeof ActiveLinkInner>;
