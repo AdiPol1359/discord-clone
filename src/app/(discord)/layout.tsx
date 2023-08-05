@@ -12,7 +12,7 @@ export default function DiscordLayout({
 		<PrivateRoute>
 			<div className="theme-dark flex h-full">
 				<UserGuildsNavigation />
-				{children}
+				<main>{children}</main>
 			</div>
 		</PrivateRoute>
 	);
