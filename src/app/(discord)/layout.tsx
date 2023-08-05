@@ -1,4 +1,5 @@
 import { PrivateRoute } from '@/auth/components/PrivateRoute';
+import { UserGuildsNavigation } from '@/guilds/components/UserGuildsNavigation/UserGuildsNavigation';
 
 import type { ReactNode } from 'react';
 
@@ -7,5 +8,12 @@ export default function DiscordLayout({
 }: {
 	readonly children: ReactNode;
 }) {
-	return <PrivateRoute>{children}</PrivateRoute>;
+	return (
+		<PrivateRoute>
+			<div className="theme-dark flex h-full">
+				<UserGuildsNavigation />
+				<main>{children}</main>
+			</div>
+		</PrivateRoute>
+	);
 }

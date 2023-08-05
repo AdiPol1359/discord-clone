@@ -13,6 +13,8 @@ export default {
 			},
 			colors: {
 				background: {
+					floating: 'var(--background-floating)',
+					primary: 'var(--background-primary)',
 					secondary: 'var(--background-secondary)',
 					tertiary: 'var(--background-tertiary)',
 				},
@@ -20,6 +22,7 @@ export default {
 					primary: 'var(--background-mobile-primary)',
 				},
 				'background-modifier': {
+					accent: 'var(--background-modifier-accent)',
 					hover: 'var(--background-modifier-hover)',
 					selected: 'var(--background-modifier-selected)',
 				},
@@ -38,6 +41,9 @@ export default {
 					500: 'var(--brand-experiment-500)',
 					560: 'var(--brand-experiment-560)',
 					600: 'var(--brand-experiment-600)',
+				},
+				green: {
+					360: 'var(--green-360)',
 				},
 				header: {
 					primary: 'var(--header-primary)',
@@ -101,6 +107,9 @@ export default {
 					'50%': { opacity: '0.3', transform: 'scale(0.8)' },
 					'100%': { opacity: '1', transform: 'scale(1)' },
 				},
+			},
+			spacing: {
+				'18': '4.5rem',
 			},
 		},
 	},
