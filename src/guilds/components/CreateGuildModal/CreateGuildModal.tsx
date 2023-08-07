@@ -14,7 +14,10 @@ const scenes = {
 };
 
 export const CreateGuildModal = (
-	props: Omit<ComponentProps<typeof MultiSceneModal>, 'root' | 'scenes'>,
+	props: Omit<
+		ComponentProps<typeof MultiSceneModal>,
+		'root' | 'scenes' | 'children'
+	>,
 ) => (
 	<MultiSceneModal root={<RootScene />} scenes={scenes} {...props}>
 		<MultiSceneModal.Scene />
