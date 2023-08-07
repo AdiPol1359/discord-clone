@@ -1,32 +1,12 @@
 import { Modal } from '../Modal/Modal';
-import {
-	MultiSceneModalProvider,
-	useMultiSceneModalContext,
-} from './MultiSceneModalProvider';
+import { MultiSceneModalInnerModal } from './MultiSceneModalInnerModal';
+import { MultiSceneModalProvider } from './MultiSceneModalProvider';
+import { MultiSceneModalScene } from './MultiSceneModalScene';
 
 import type { ComponentProps } from 'react';
 
-const MultiSceneModalScene = () => {
-	const { scene } = useMultiSceneModalContext();
-
-	return scene;
-};
-
-type ModalInnerProps = ComponentProps<typeof Modal>;
-
-const ModalInner = ({ onClose, ...props }: ModalInnerProps) => {
-	const { reset } = useMultiSceneModalContext();
-
-	const handleModalClose = () => {
-		reset();
-		onClose?.();
-	};
-
-	return <Modal onClose={handleModalClose} {...props} />;
-};
-
 type MultiSceneModalProps = ComponentProps<typeof MultiSceneModalProvider> &
-	ModalInnerProps;
+	ComponentProps<typeof MultiSceneModalInnerModal>;
 
 export const MultiSceneModal = ({
 	root,
@@ -34,7 +14,7 @@ export const MultiSceneModal = ({
 	...props
 }: MultiSceneModalProps) => (
 	<MultiSceneModalProvider root={root} scenes={scenes}>
-		<ModalInner {...props} />
+		<MultiSceneModalInnerModal {...props} />
 	</MultiSceneModalProvider>
 );
 
