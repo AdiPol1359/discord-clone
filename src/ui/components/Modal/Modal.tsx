@@ -6,7 +6,7 @@ import { ModalDescription } from './ModalDescription';
 import { ModalFooter } from './ModalFooter';
 import { ModalTitle } from './ModalTitle';
 
-import CloseIcon from '@/guilds/assets/close.svg';
+import CloseIcon from '@/ui/assets/svg/close.svg';
 
 import type { ReactNode } from 'react';
 
