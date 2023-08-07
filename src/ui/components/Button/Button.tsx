@@ -52,7 +52,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 			disabled={disabled}
 			onClick={onClick}
 			className={twMerge(
-				'h-11 w-fit min-w-[96px] rounded-[3px] bg-brand-experiment px-4 font-medium text-white-500 transition-colors duration-200 focus:outline-0 disabled:cursor-not-allowed disabled:opacity-50',
+				'h-11 w-fit min-w-[96px] rounded-[3px] px-4 font-medium text-white-500 transition-colors duration-200 focus:outline-0 disabled:cursor-not-allowed disabled:opacity-50',
 				colors[color],
 				sizes[size],
 				fill && 'w-full',
