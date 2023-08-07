@@ -32,6 +32,7 @@ export const MultiSceneModal = ({
 		<ModalInner {...props} />
 	</MultiSceneModalProvider>
 );
+
 MultiSceneModal.Title = Modal.Title;
 MultiSceneModal.Description = Modal.Description;
 MultiSceneModal.Content = Modal.Content;
