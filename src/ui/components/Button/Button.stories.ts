@@ -27,3 +27,15 @@ export const Fill: Story = {
 		fill: true,
 	},
 };
+
+export const Primary: Story = {
+	args: {
+		color: 'primary',
+	},
+};
+
+export const Small: Story = {
+	args: {
+		size: 'sm',
+	},
+};

@@ -20,21 +20,21 @@ const ModalInner = ({ onClose, ...props }: ModalInnerProps) => {
 	return <Modal onClose={handleModalClose} {...props} />;
 };
 
-type MultiSceneModalInnerProps = ComponentProps<
-	typeof MultiSceneModalProvider
-> &
+type MultiSceneModalProps = ComponentProps<typeof MultiSceneModalProvider> &
 	ModalInnerProps;
 
-const MultiSceneModalInner = ({
+export const MultiSceneModal = ({
 	root,
 	scenes,
 	...props
-}: MultiSceneModalInnerProps) => (
+}: MultiSceneModalProps) => (
 	<MultiSceneModalProvider root={root} scenes={scenes}>
 		<ModalInner {...props} />
 	</MultiSceneModalProvider>
 );
-
-MultiSceneModalInner.Scene = MultiSceneModalScene;
-
-export const MultiSceneModal = Object.assign(MultiSceneModalInner, Modal);
+MultiSceneModal.Title = Modal.Title;
+MultiSceneModal.Description = Modal.Description;
+MultiSceneModal.Content = Modal.Content;
+MultiSceneModal.Footer = Modal.Footer;
+MultiSceneModal.Back = Modal.Back;
+MultiSceneModal.Scene = MultiSceneModalScene;
