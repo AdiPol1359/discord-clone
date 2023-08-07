@@ -3,9 +3,14 @@ import {
 	MultiSceneModalProvider,
 	useMultiSceneModalContext,
 } from './MultiSceneModalProvider';
-import { MultiSceneModalScene } from './MultiSceneModalScene';
 
 import type { ComponentProps } from 'react';
+
+const MultiSceneModalScene = () => {
+	const { scene } = useMultiSceneModalContext();
+
+	return scene;
+};
 
 type ModalInnerProps = ComponentProps<typeof Modal>;
 
