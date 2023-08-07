@@ -7,6 +7,7 @@ type CreateGuildButtonProps = Readonly<{
 
 export const CreateGuildButton = ({ onClick }: CreateGuildButtonProps) => (
 	<button
+		type="button"
 		onClick={onClick}
 		className="mt-4 flex h-16 w-full items-center gap-x-2 rounded-lg border border-background-modifier-accent px-4 hover:bg-background-modifier-hover active:bg-background-modifier-active"
 	>
