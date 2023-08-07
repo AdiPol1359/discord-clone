@@ -26,10 +26,10 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Cypress run
+        run: pnpm build
         uses: cypress-io/github-action@v5
         with:
           install: false
-          build: pnpm build
           start: pnpm start
           wait-on: 'http://localhost:3000'
         env:
