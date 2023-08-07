@@ -1,3 +1,5 @@
+import { FormTitle } from '../FormTitle/FormTitle';
+
 import type { ReactNode } from 'react';
 
 type ControlsGroupProps = Readonly<{
@@ -7,9 +9,7 @@ type ControlsGroupProps = Readonly<{
 
 export const ControlsGroup = ({ label, children }: ControlsGroupProps) => (
 	<fieldset className="space-y-2">
-		<legend className="text-xs font-bold uppercase text-header-secondary">
-			{label}
-		</legend>
+		<FormTitle as="legend">{label}</FormTitle>
 		<div className="flex justify-between gap-x-3">{children}</div>
 	</fieldset>
 );

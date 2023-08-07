@@ -23,6 +23,7 @@ export default {
 				},
 				'background-modifier': {
 					accent: 'var(--background-modifier-accent)',
+					active: 'var(--background-modifier-active)',
 					hover: 'var(--background-modifier-hover)',
 					selected: 'var(--background-modifier-selected)',
 				},
@@ -42,6 +43,11 @@ export default {
 					560: 'var(--brand-experiment-560)',
 					600: 'var(--brand-experiment-600)',
 				},
+				'button-secondary-background': {
+					DEFAULT: 'var(--button-secondary-background)',
+					active: 'var(--button-secondary-background-active)',
+					hover: 'var(--button-secondary-background-hover)',
+				},
 				green: {
 					360: 'var(--green-360)',
 				},
@@ -57,6 +63,10 @@ export default {
 					hover: 'var(--interactive-hover)',
 					normal: 'var(--interactive-normal)',
 				},
+				modal: {
+					background: 'var(--modal-background)',
+					'footer-background': 'var(--modal-footer-background)',
+				},
 				primary: {
 					100: 'var(--primary-100)',
 					130: 'var(--primary-130)',
@@ -65,6 +75,7 @@ export default {
 					330: 'var(--primary-330)',
 					360: 'var(--primary-360)',
 					400: 'var(--primary-400)',
+					430: 'var(--primary-430)',
 					460: 'var(--primary-460)',
 					500: 'var(--primary-500)',
 					600: 'var(--primary-600)',
@@ -109,6 +120,7 @@ export default {
 				},
 			},
 			spacing: {
+				'9.5': '2.375rem',
 				'18': '4.5rem',
 			},
 		},

@@ -1,6 +1,6 @@
+import { CreateGuildNavigationItem } from './CreateGuildNavigationItem';
 import { UserGuildsNavigationItem } from './UserGuildsNavigationItem';
 
-import AddIcon from '@/guilds/assets/add.svg';
 import DiscordLogoIcon from '@/guilds/assets/discord-logo.svg';
 
 export const UserGuildsNavigation = () => (
@@ -37,9 +37,7 @@ export const UserGuildsNavigation = () => (
 				</UserGuildsNavigationItem>
 			</li>
 			<li>
-				<UserGuildsNavigationItem type="button" tooltip="Add a server">
-					<AddIcon aria-hidden="true" />
-				</UserGuildsNavigationItem>
+				<CreateGuildNavigationItem />
 			</li>
 		</ul>
 	</nav>
