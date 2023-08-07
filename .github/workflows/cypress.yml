@@ -20,12 +20,15 @@ jobs:
       - name: Setup pnpm cache
         uses: actions/cache@v3
         with:
-          path: |
-            ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-            /home/runner/.cache/Cypress
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
+
+      - name: Setup cypress cache
+          uses: actions/cache@v3
+          with:
+            path: /home/runner/.cache/Cypress
 
       - name: Cypress run
         uses: cypress-io/github-action@v5
