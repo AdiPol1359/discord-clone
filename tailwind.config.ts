@@ -78,6 +78,7 @@ export default {
 					430: 'var(--primary-430)',
 					460: 'var(--primary-460)',
 					500: 'var(--primary-500)',
+					530: 'var(--primary-530)',
 					600: 'var(--primary-600)',
 					630: 'var(--primary-630)',
 					700: 'var(--primary-700)',
