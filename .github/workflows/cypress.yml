@@ -28,8 +28,8 @@ jobs:
       - name: Setup cypress cache
         uses: actions/cache@v3
         with:
-          path: /home/runner/.cache/Cypress
-          key: ${{ runner.os }}-cypress-cache
+          path: ~/.cache/Cypress
+          key: ${{ runner.os }}-cypress-cache-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Cypress run
         uses: cypress-io/github-action@v5
