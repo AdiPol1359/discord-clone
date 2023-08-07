@@ -25,12 +25,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Setup cypress cache
-        uses: actions/cache@v3
-        with:
-          path: /home/runner/.cache/Cypress
-          key: ${{ runner.os }}-cypress-cache-123
-
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
@@ -40,3 +34,4 @@ jobs:
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          CYPRESS_INSTALL_BINARY: 0
