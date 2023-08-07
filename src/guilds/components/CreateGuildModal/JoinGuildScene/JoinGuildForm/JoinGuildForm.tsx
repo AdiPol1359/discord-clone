@@ -14,11 +14,11 @@ export const JoinGuildForm = () => {
 			<TextField
 				label="Invite link"
 				placeholder="https://discord.gg/hTKzmak"
-				error={errors.link?.message}
+				error={errors.invitation?.message}
 				autoComplete={false}
 				spellCheck={false}
 				required
-				{...register('link')}
+				{...register('invitation')}
 			/>
 		</form>
 	);
