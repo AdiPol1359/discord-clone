@@ -20,16 +20,17 @@ jobs:
       - name: Setup pnpm cache
         uses: actions/cache@v3
         with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          path: |
+            ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+            /home/runner/.cache/Cypress
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
       - name: Cypress run
-        run: pnpm build
         uses: cypress-io/github-action@v5
         with:
-          install: false
+          build: pnpm build
           start: pnpm start
           wait-on: 'http://localhost:3000'
         env:
