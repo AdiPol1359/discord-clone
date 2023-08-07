@@ -1,0 +1,32 @@
+import { z } from 'zod';
+
+import {
+	GUILD_INVITATION_EMPTY_ERROR_MESSAGE,
+	GUILD_INVITATION_INVALID_ERROR_MESSAGE,
+	GUILD_INVITATION_LENGTH,
+	GUILD_NAME_MAX_LENGTH,
+	GUILD_NAME_MAX_LENGTH_ERROR_MESSAGE,
+	GUILD_NAME_MIN_LENGTH,
+	GUILD_NAME_MIN_LENGTH_ERROR_MESSAGE,
+} from './guilds.constants';
+
+export const createGuildFormSchema = z.object({
+	name: z
+		.string()
+		.trim()
+		.min(GUILD_NAME_MIN_LENGTH, GUILD_NAME_MIN_LENGTH_ERROR_MESSAGE)
+		.max(GUILD_NAME_MAX_LENGTH, GUILD_NAME_MAX_LENGTH_ERROR_MESSAGE),
+});
+
+export const joinGuildFormSchema = z.object({
+	invitation: z.union([
+		z
+			.string()
+			.nonempty(GUILD_INVITATION_EMPTY_ERROR_MESSAGE)
+			.length(GUILD_INVITATION_LENGTH, GUILD_INVITATION_INVALID_ERROR_MESSAGE),
+		z
+			.string()
+			.nonempty(GUILD_INVITATION_EMPTY_ERROR_MESSAGE)
+			.url(GUILD_INVITATION_INVALID_ERROR_MESSAGE),
+	]),
+});

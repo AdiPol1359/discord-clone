@@ -21,8 +21,10 @@
 	--primary-330: hsl(215 calc(var(--saturation-factor) * 8.8%) 73.3%);
 	--primary-360: hsl(214 calc(var(--saturation-factor) * 8.1%) 61.2%);
 	--primary-400: hsl(var(--primary-400-hsl));
+	--primary-430: hsl(229 calc(var(--saturation-factor) * 4.8%) 44.9%);
 	--primary-460: hsl(228 calc(var(--saturation-factor) * 5.2%) 38%);
 	--primary-500: hsl(var(--primary-500-hsl));
+	--primary-530: hsl(227 calc(var(--saturation-factor) * 6.5%) 27.3%);
 	--primary-600: hsl(223 calc(var(--saturation-factor) * 6.7%) 20.6%);
 	--primary-630: hsl(220 calc(var(--saturation-factor) * 6.5%) 18%);
 	--primary-700: hsl(225 calc(var(--saturation-factor) * 6.3%) 12.5%);
@@ -45,6 +47,7 @@
 	--background-mobile-primary: var(--primary-100);
 
 	--background-modifier-accent: hsl(var(--primary-400-hsl) / 0.24);
+	--background-modifier-active: hsl(var(--primary-400-hsl) / 0.2);
 	--background-modifier-hover: hsl(var(--primary-400-hsl) / 0.16);
 	--background-modifier-selected: hsl(var(--primary-400-hsl) / 0.24);
 
@@ -54,6 +57,10 @@
 	--brand-experiment-560: var(--brand-560);
 	--brand-experiment-600: var(--brand-600);
 
+	--button-secondary-background: var(--primary-430);
+	--button-secondary-background-active: var(--primary-530);
+	--button-secondary-background-hover: var(--primary-500);
+
 	--header-primary: var(--primary-860);
 	--header-secondary: var(--primary-500);
 
@@ -62,6 +69,9 @@
 	--interactive-active: var(--primary-860);
 	--interactive-hover: var(--primary-600);
 	--interactive-normal: var(--primary-500);
+
+	--modal-background: var(--white-500);
+	--modal-footer-background: var(--primary-130);
 
 	--scrollbar-thin-thumb: hsl(var(--primary-500-hsl) / 0.3);
 
@@ -82,8 +92,13 @@
 	--background-mobile-primary: var(--primary-600);
 
 	--background-modifier-accent: hsl(var(--primary-500-hsl) / 0.48);
+	--background-modifier-active: hsl(var(--primary-500-hsl) / 0.48);
 	--background-modifier-hover: hsl(var(--primary-500-hsl) / 0.3);
 	--background-modifier-selected: hsl(var(--primary-500-hsl) / 0.6);
+
+	--button-secondary-background: var(--primary-500);
+	--button-secondary-background-active: var(--primary-400);
+	--button-secondary-background-hover: var(--primary-430);
 
 	--header-primary: var(--primary-130);
 	--header-secondary: var(--primary-330);
@@ -93,6 +108,9 @@
 	--interactive-active: var(--white-500);
 	--interactive-hover: var(--primary-230);
 	--interactive-normal: var(--primary-330);
+
+	--modal-background: var(--primary-600);
+	--modal-footer-background: var(--primary-630);
 
 	--scrollbar-thin-thumb: var(--primary-730);
 

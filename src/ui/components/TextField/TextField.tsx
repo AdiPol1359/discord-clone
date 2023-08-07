@@ -1,6 +1,6 @@
 import { forwardRef, useId } from 'react';
-import { twMerge } from 'tailwind-merge';
 
+import { FormTitle } from '../FormTitle/FormTitle';
 import { Input } from '../Input/Input';
 
 import type { ComponentProps } from 'react';
@@ -17,17 +17,11 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
 
 		return (
 			<div className="space-y-2">
-				<label
-					htmlFor={id}
-					className={twMerge(
-						'flex gap-x-1 text-xs font-bold uppercase text-header-secondary',
-						error && 'text-text-danger',
-					)}
-				>
+				<FormTitle as="label" htmlFor={id} error={Boolean(error)}>
 					{label}
 					{error && <p className="font-medium normal-case italic">- {error}</p>}
 					{required && !error && <span className="text-status-danger">*</span>}
-				</label>
+				</FormTitle>
 				<Input ref={ref} id={id} label={label} required={required} {...props} />
 			</div>
 		);
