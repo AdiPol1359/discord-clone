@@ -4,6 +4,8 @@ describe('The Login Page', () => {
 			fixture: 'session.json',
 		}).as('login');
 
+		cy.fakeProfile();
+
 		cy.visit('/login');
 
 		cy.getByTestId('email').type('foo@gmail.com');

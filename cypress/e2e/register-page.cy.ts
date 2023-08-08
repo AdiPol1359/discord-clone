@@ -4,6 +4,8 @@ describe('The Register Page', () => {
 			fixture: 'session.json',
 		}).as('register');
 
+		cy.fakeProfile();
+
 		cy.visit('/register');
 
 		cy.getByTestId('rules').click();
