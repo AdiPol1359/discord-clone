@@ -30,7 +30,7 @@ export const Modal = ({ open, onOpen, onClose, children }: ModalProps) => (
 	>
 		<Dialog.Portal>
 			<Dialog.Overlay className="fixed inset-0 bg-black/70" />
-			<Dialog.Content className="fixed left-1/2 top-1/2 w-full max-w-md -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded bg-modal-background pt-2">
+			<Dialog.Content className="fixed h-full w-full overflow-hidden bg-modal-background pt-2 sm:left-1/2 sm:top-1/2 sm:h-fit sm:max-w-md sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded">
 				<Dialog.Close
 					aria-label="Close modal"
 					className="absolute right-5 top-5 text-interactive-normal opacity-50 transition-opacity hover:opacity-100"
