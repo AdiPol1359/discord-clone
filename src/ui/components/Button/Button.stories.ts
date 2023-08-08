@@ -16,6 +16,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
+export const Primary: Story = {
+	args: {
+		color: 'primary',
+	},
+};
+
 export const Disabled: Story = {
 	args: {
 		disabled: true,
@@ -28,14 +34,20 @@ export const Fill: Story = {
 	},
 };
 
-export const Primary: Story = {
+export const ExtraSmall: Story = {
 	args: {
-		color: 'primary',
+		size: 'xs',
 	},
 };
 
 export const Small: Story = {
 	args: {
 		size: 'sm',
+	},
+};
+
+export const Medium: Story = {
+	args: {
+		size: 'md',
 	},
 };
