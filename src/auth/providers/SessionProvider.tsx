@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 
+import { getUserProfile } from '../auth.service';
+
 import { supabase } from '@/lib/supabase';
 import { createSafeContext } from '@/utils/context';
 
-import type { Session } from '@supabase/auth-helpers-nextjs';
+import type { Session } from '../auth.types';
 import type { ReactNode } from 'react';
 
 interface SessionContextValue {
@@ -14,16 +16,23 @@ interface SessionContextValue {
 const [SessionContextProvider, useSessionContext] =
 	createSafeContext<SessionContextValue>();
 
-const SUPABASE_EVENTS = ['INITIAL_SESSION', 'SIGNED_IN', 'SIGNED_OUT'];
-
 const SessionProvider = ({ children }: { readonly children: ReactNode }) => {
 	const [session, setSession] = useState<Session | null | undefined>();
 
 	useEffect(() => {
-		const { data } = supabase.auth.onAuthStateChange((event, session) => {
-			if (SUPABASE_EVENTS.includes(event)) {
-				setSession(session);
-			}
+		const { data } = supabase.auth.onAuthStateChange(async (event, session) => {
+			const profile = await getUserProfile();
+
+			setSession(
+				session &&
+					profile && {
+						...session,
+						profile: {
+							username: profile.username,
+							bornAt: new Date(profile.born_at),
+						},
+					},
+			);
 		});
 
 		return () => {

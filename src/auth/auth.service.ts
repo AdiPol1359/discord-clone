@@ -50,3 +50,12 @@ export const signUp = async (
 		onAlreadyExists?.(target);
 	}
 };
+
+export const getUserProfile = async () => {
+	const { data } = await supabase
+		.from('profile')
+		.select('username, born_at')
+		.single();
+
+	return data;
+};
