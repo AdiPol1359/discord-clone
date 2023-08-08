@@ -1,6 +1,8 @@
 :root {
 	--saturation-factor: 1;
 
+	--black-500: hsl(0 calc(var(--saturation-factor) * 0%) 0%);
+
 	--blue-345: hsl(200 calc(var(--saturation-factor) * 100%) 49.4%);
 	--blue-430: hsl(212 calc(var(--saturation-factor) * 100%) 45.3%);
 

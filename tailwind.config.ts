@@ -10,6 +10,10 @@ export default {
 			animation: {
 				auth: 'auth 0.25s',
 				loading: 'loading 1.4s ease-in-out infinite',
+				'modal-content-show': 'modalContentShow 0.15s',
+				'modal-content-hide': 'modalContentHide 0.15s',
+				'modal-overlay-show': 'modalOverlayShow 0.2s',
+				'modal-overlay-hide': 'modalOverlayHide 0.2s',
 			},
 			colors: {
 				background: {
@@ -26,6 +30,9 @@ export default {
 					active: 'var(--background-modifier-active)',
 					hover: 'var(--background-modifier-hover)',
 					selected: 'var(--background-modifier-selected)',
+				},
+				black: {
+					500: 'var(--black-500)',
 				},
 				blue: {
 					345: 'var(--blue-345)',
@@ -119,6 +126,25 @@ export default {
 					'50%': { opacity: '0.3', transform: 'scale(0.8)' },
 					'100%': { opacity: '1', transform: 'scale(1)' },
 				},
+				modalContentShow: {
+					from: { opacity: '0', transform: 'translate(-50%, -50%) scale(0.7)' },
+					to: { opacity: '1', transform: 'translate(-50%, -50%) scale(1)' },
+				},
+				modalContentHide: {
+					from: { opacity: '1', transform: 'translate(-50%, -50%) scale(1)' },
+					to: { opacity: '0', transform: 'translate(-50%, -50%) scale(0.8)' },
+				},
+				modalOverlayShow: {
+					from: { opacity: '0' },
+					to: { opacity: '0.85' },
+				},
+				modalOverlayHide: {
+					from: { opacity: '0.85' },
+					to: { opacity: '0' },
+				},
+			},
+			opacity: {
+				'85': '0.85',
 			},
 			spacing: {
 				'9.5': '2.375rem',
