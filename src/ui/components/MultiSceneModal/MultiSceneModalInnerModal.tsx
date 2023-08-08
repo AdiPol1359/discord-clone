@@ -4,15 +4,15 @@ import { useMultiSceneModalContext } from './MultiSceneModalProvider';
 import type { ComponentProps } from 'react';
 
 export const MultiSceneModalInnerModal = ({
-	onClose,
+	onUnmount,
 	...props
 }: ComponentProps<typeof Modal>) => {
 	const { reset } = useMultiSceneModalContext();
 
-	const handleModalClose = () => {
+	const handleModalUnmount = () => {
 		reset();
-		onClose?.();
+		onUnmount?.();
 	};
 
-	return <Modal onClose={handleModalClose} {...props} />;
+	return <Modal onUnmount={handleModalUnmount} {...props} />;
 };
